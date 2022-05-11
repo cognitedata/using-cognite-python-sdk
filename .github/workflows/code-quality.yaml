@@ -1,0 +1,41 @@
+name: Code Quality checks for PRs
+
+on:
+  pull_request:
+
+jobs:
+  checks:
+    name: Pre-Commit checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8.12'
+
+      - name: Set up cache
+        uses: actions/cache@v2.1.6
+        with:
+          path: .venv
+          key: venv-${{ hashFiles('pyproject.toml') }}-${{ hashFiles('poetry.lock') }}
+
+      - name: Install Poetry
+        run: |
+          pip install -U pip
+          pip install poetry
+          poetry config virtualenvs.in-project true
+          poetry install
+
+      - name: Run linting
+        run: |
+          poetry run pre-commit run --all-files
+
+      - name: Run tests
+        run: export PYTHONPATH=$PYTHONPATH:$(pwd); poetry run pytest -c pyproject.toml
+
+      - name: Run security checks
+        run: |
+          poetry check
+          poetry run safety check --full-report
