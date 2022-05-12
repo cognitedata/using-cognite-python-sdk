@@ -20,7 +20,7 @@ Open the repo in IDE (e.g. VS code) and run the following command in the termina
 poetry install
 ```
 
-Now you're ready to run the code in jupyter notebooks.
+Now you're ready to run the code in jupyter notebooks. ( Note : Change the "Kernel" to use the virtual environment created by poetry.)
 
 
 ## Additional notes for developers:
