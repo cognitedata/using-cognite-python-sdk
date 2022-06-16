@@ -1,15 +1,14 @@
-# Python Project
-This is a template for a basic python project.
+# Using Cognite Python SDK
+[![Code Quality Checks](https://github.com/cognitedata/using-cognite-python-sdk/actions/workflows/code-quality.yaml/badge.svg)](https://github.com/cognitedata/using-cognite-python-sdk/actions/workflows/code-quality.yaml)
 
-* Ensure that URL points to file in your repository.
-[![Code Quality Checks](https://github.com/choukha/python-basic-template/actions/workflows/code-quality.yaml/badge.svg)](https://github.com/choukha/python-basic-template/actions/workflows/code-quality.yaml)
+A step by step guide with practical examples and code for using Cognite Python SDK.
+https://cognite-docs.readthedocs-hosted.com/projects/cognite-sdk-python/en/latest/
 
+## Getting Started:
 
-To get started with this repo :
-
-1. First clone the repository, example such as
+1. First clone the repository using git
 ```
-git clone git@github.com:your-user/your-repo-name.git
+git clone git@github.com:cognitedata/using-cognite-python-sdk.git
 ```
 2. Make sure that you've [poetry](https://python-poetry.org/) installed.
 Also change the following setting in `poetry`
@@ -21,7 +20,11 @@ Open the repo in IDE (e.g. VS code) and run the following command in the termina
 poetry install
 ```
 
-3. Also install pre-commit hooks
+Now you're ready to run the code in jupyter notebooks. ( Note : Change the "Kernel" to use the virtual environment created by poetry.)
+
+
+## Additional notes for developers:
+3. Also install pre-commit hooks. ( Make sure you've [pre-commit](https://pre-commit.com/) installed prior to this command)
 ```
 pre-commit install
 ```
