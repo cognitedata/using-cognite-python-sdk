@@ -6,8 +6,9 @@ authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-cognite-sdk = "^2.49.0"
 msal = "^1.17.0"
+cognite-sdk-core = "^2.56.0"
+python-dotenv = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
 isort = "^5.10.1"
