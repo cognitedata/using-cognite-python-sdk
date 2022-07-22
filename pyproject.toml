@@ -9,6 +9,8 @@ python = "^3.8"
 msal = "^1.17.0"
 cognite-sdk-core = "^2.56.0"
 python-dotenv = "^0.20.0"
+pandas = "^1.4.3"
+matplotlib = "^3.5.2"
 
 [tool.poetry.dev-dependencies]
 isort = "^5.10.1"
