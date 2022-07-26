@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "python-basic-template"
+name = "using-cognite-python-sdk"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Choukha Ram, choukha.ram@cognite.com"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -11,6 +11,10 @@ cognite-sdk-core = "^2.56.0"
 python-dotenv = "^0.20.0"
 pandas = "^1.4.3"
 matplotlib = "^3.5.2"
+wget = "^3.2"
+beautifulsoup4 = "^4.11.1"
+lxml = "^4.9.1"
+openpyxl = "^3.0.10"
 
 [tool.poetry.dev-dependencies]
 isort = "^5.10.1"
