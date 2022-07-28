@@ -1,6 +1,6 @@
 Dis No,Disaster Group,Disaster Subgroup,Disaster Type,Disaster Subtype,Event Name,Country,ISO,Region,Continent,Location,Origin,Start Year,Start Month,Start Day,End Year,End Month,End Day
 2011-0159-ESP,Natural,Geophysical,Earthquake,Ground movement,,Spain,ESP,Southern Europe,Europe,"Lorca municipality (Murcia district, Region de Murcia)",,2011,5,11,2011,5,11
-2010-0170-ISL,Natural,Geophysical,Volcanic activity,Ash fall,Eyjafjallajokull,Iceland,ISL,Northern Europe,Europe," Fljotshlid, Eyjafjöll, and Landeyjar villages (Rangarvalla province)",,2010,3,,2010,4,
+2010-0170-ISL,Natural,Geophysical,Volcanic activity,Ash fall,Eyjafjallajokull,Iceland,ISL,Northern Europe,Europe," Fljotshlid, Eyjafjöll, and Landeyjar villages (Rangarvalla province)",,2010,3,1,2010,4,28
 2010-0574-SRB,Natural,Geophysical,Earthquake,Ground movement,,Serbia,SRB,Southern Europe,Europe,Kraljevo town (Raski Province),,2010,11,3,2010,11,3
 2012-0152-BGR,Natural,Geophysical,Earthquake,Ground movement,,Bulgaria,BGR,Eastern Europe,Europe,"Pernik town (Pernik Province), Sofia town (Sofia-city Province)",,2012,5,22,2012,5,22
 2013-0121-HUN,Natural,Geophysical,Earthquake,Ground movement,,Hungary,HUN,Eastern Europe,Europe,Heves province,,2013,4,14,2013,4,23
