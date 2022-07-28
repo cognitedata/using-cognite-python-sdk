@@ -11,18 +11,18 @@ The data used in this exercise will be around mapping geographical regions and c
 
 ## Pro-tips before you get started
 
-* Pressing `Tab` in your jupyter-notebook enables code auto-completion. This is especially handy when importing packages such as `cognite.client.data_classes.Asset`.
-* Pressing `Shift+Tab` when your cursor is inside a Python function opens a small pop-up in the jupyter-notebook. This pop-up shows the functions docstring to tell you what the expected function arguments are along with examples on how to use the function. Try this on `client.assets.search()` as an example. 
-* When creating resource types in CDF, you typically specify either the `name`, the `external_id` or both. The external_id in this case is a **human readable unique identifier** that helps you identify your resource type while ``name` on the other hand is not unique. Essentially this means that 2 resource types can share the same name but the same external_id.
-* In this hands-on exercise, we only require you to specify the name and the external_id. Feel free to use the external_id as well if you want to but bear in mind that you might encounter duplication errors if that external_id for that particular resource_type has already been specified.
-* If the required assets are already created in the tenant, then it's better to add a unique prefix or suffix to the external_ids to distinguish and avoid the duplicated errors.
+* Pressing `Tab` in your jupyter-notebook enables code auto-completion. 
+* Pressing `Shift+Tab` when your cursor is inside a Python function opens up a small pop-up box in the jupyter-notebook. This pop-up shows you the functions docstring and tells you what the expected function arguments are along with examples on how to use the function.
+* When creating resource types in CDF, you typically specify either the `name`, the `external_id` or both. The external_id in this case is a **human readable unique identifier** that helps you identify your resource type while `name` on the other hand is not unique. Essentially this means that 2 resource types can share the same `name` but cannot have the same `external_id`.
+* In this hands-on exercise, we only require you to specify the `name` and not the `external_id`. Feel free to use the `external_id` as well if you want to but bear in mind that you might encounter duplication errors if that `external_id` for that particular resource type has already been created.
+* If you encounter duplication errors then it's better to add a unique prefix or suffix to the `external_id` of your resource type. Something like `jack_reacher_<my_external_id>`.
 
 
 ## 0. Create the Cognite Client
-The first step is to connect to Cognite Data Fusion. Use the Authentication script file `utils/auth.py` in this repo to instantiate a Cognite client. Note that to use the interactive login you need to be invited as a guest member to the Cognite Learn AAD (Azure Active Directory) tenant. 
-
+The first step is to connect to Cognite Data Fusion. Use the Authentication script file `utils/auth.py` in this repo to instantiate a Cognite client. Note that to use the interactive login you need to be signed up to Cognite Hub (https://auth.hub.cognite.com/).
+ 
 ## 1. Create a Data Set
-- Create a data set with the name **"world_info"**. 
+- Create a data set with the name **"<your_name>_world_info"**. 
 - Make sure that the data set is write protected.
 - Find the data set id of your newly created data set
 
