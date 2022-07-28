@@ -1,68 +1,98 @@
 # Practical tasks using Cognite Python SDK
-In this section learner need to perform various tasks such as
-- Example dataset uploading and creation of various resource types
-- Retrieve, explore and update the data
-- Cleanup
+
+In this hands-on exercise, you will perform the following tasks:
+- Creating data sets and various CDF resource types
+- Retrieving, exploring and updating data in CDF
+- Cleaning up
 
 ## Use-case and Data overview
-The data used in this section is downloaded from internet. It's the data about various countries.
-- First an asset hierarchy need to be created for mapping between Geographical regions and countries.
-- Then step by step various data from sources like World Bank, United Nations etc is added at a country level.
+
+The data used in this exercise will be around mapping geographical regions and countries to assets in CDF. Additionally, we will integrate this asset hierarchy with other sources such as the World Bank and the United Nations. 
+
+## Pro-tips before you get started
+
+* Pressing `Tab` in your jupyter-notebook enables code auto-completion. This is especially handy when importing packages such as `cognite.client.data_classes.Asset`.
+* Pressing `Shift+Tab` when your cursor is inside a Python function opens a small pop-up in the jupyter-notebook. This pop-up shows the functions docstring to tell you what the expected function arguments are along with examples on how to use the function. Try this on `client.assets.search()` as an example. 
+* When creating resource types in CDF, you typically specify either the `name`, the `external_id` or both. The external_id in this case is a **human readable unique identifier** that helps you identify your resource type while ``name` on the other hand is not unique. Essentially this means that 2 resource types can share the same name but the same external_id.
+* In this hands-on exercise, we only require you to specify the name and the external_id. Feel free to use the external_id as well if you want to but bear in mind that you might encounter duplication errors if that external_id for that particular resource_type has already been specified.
+* If the required assets are already created in the tenant, then it's better to add a unique prefix or suffix to the external_ids to distinguish and avoid the duplicated errors.
+
 
 ## 0. Create the Cognite Client
-The first step is to connect to Cognite Data Fusion. Use the Authentication script file from utils and create a cognite client.
+The first step is to connect to Cognite Data Fusion. Use the Authentication script file `utils/auth.py` in this repo to instantiate a Cognite client. Note that to use the interactive login you need to be invited as a guest member to the Cognite Learn AAD (Azure Active Directory) tenant. 
 
-## 1. Create a dataset
-- Create a dataset with name such as "world_info" or "global_info". 
-- Make sure it is write protected.
-- Get the dataset id of the dataset and save as `ds_id`
+## 1. Create a Data Set
+- Create a data set with the name **"world_info"**. 
+- Make sure that the data set is write protected.
+- Find the data set id of your newly created data set
 
 ## 2. Create the Asset Hierarchy
-- Obtain the United Nations Location Codes data from this URL https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv
-- Read the csv file in a datarame in notebook (e.g. world_df ).
-- Create a Root Asset called "world" with proper description and associate it with the dataset using ds_id.
-- After creating the root asset, update the Name of the Asset.( Change it to "Global" or "my_world" )
-- Get the list of the the regions from the world_df and create Region level assets under Root asset.
-- Next, Get the list of Country & Region pairs from the world_df and create the country level assets under each region asset.
-- Finally, Use the code or Go to CDF UI, To verify if the asset hierarchy is created as defined in above steps.
 
-Note : If the required assets are already created in the tenant, then it's better to add a unique prefix or suffix to the external_ids & names to distinguish and avoid the duplicated errors.
+For the Asset Hierarchy, we will be using the United Nations Location Codes data stored in `data/all_countries.csv`. This can also be obtained from this URL: https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv. To create the asset hierarchy, follow the steps below:
 
-## 3. Add Data for each country
+- Create an asset called "world" with an appropriate description and associate it to the dataset that you created in the previous section. This will be our **root asset** (i.e. the top level asset).
+- After creating the root asset, update the name of the asset to "global".
+- Read the `all_countries.csv` file as a dataframe and list all the unique regions in the world.
+- For each geographical region, create a corresponding CDF asset that is under the "global" root asset and is associated with the "world_info" data set. 
+- Next create country level assets using the data from the csv and link them to their corresponding region level assets.
+-  Finally, check if the asset hierarchy has been correctly created. You can do checks such as double-checking that all country-level assets that are children of the "Europe" region-level assets are correct. 
 
-### 3.1 Add timeseries
-- Get the World Population Data over the years https://data.worldbank.org/indicator/SP.POP.TOTL
-using worldbank API (wbgapi) package. ( You can decide the duration e.g. take last 20 years i.e. 2000-2020)
-- Create the population timeseries for each country asset and Insert the data from world bank in those timeseries.
+## 3. Adding Time Series Data
 
-### 3.2 Add some files
-- PDF Files data for each country by UN https://unctadstat.unctad.org/CountryProfile/GeneralProfile/en-GB/012/index.html
-- Get the PDF files by passing the Country Code( 3 digit code ) to this URL
-https://unctadstat.unctad.org/CountryProfile/GeneralProfile/en-GB/{CountryCode}/GeneralProfile{CountryCode}.pdf
-- Upload the files for each country under it's own asset. Also specify the dataset ID. ( Upload 10-20 files, no need to upload for all the countries)
+For this exercise we will be using population data from the World Bank (https://data.worldbank.org/indicator/SP.POP.TOTL) to generate time series data for our country assets. A post-processed form of this data can be found in `../data/populations_postprocessed.csv` which can be used for this exercise. To create time series data, follow the steps below:
 
-Downloading files with code might require a bit of web scrapping code, but you can also do manually for some countries.
+- Create a time series object for each country asset in CDF called `<country>_population` and associate it with its corresponding country asset. Remember to associate the data as well to the data set that you created. As an example, the time series for Aruba would be called `Aruba_population`.
+- Load the data from `populations_postprocessed.csv` into a pandas dataframe.
+- Insert the data for each country in this dataframe using `client.datapoints.insert_dataframe`.
+- As a check, retrieve the latest population data for the countries of Latvia, Guatemala and Benin.
+- Calculate the total population of the Europe region using the Asset Hierarchy and the time series data.
 
-### 3.3 Add events
-- Events data e.g. All disasters by Country https://public.emdat.be/data
-- Create an account and download the latest data from the above URL.
-- Download all types of events in the whole world.
-- Read the downloaded excel file in notebook.
-- Create the events from this data, for each country. 
 
-Note : A historical file of these events is available in data folder.
+## 4. Uploading Files
 
-### 3.4 Add Labels
-- Create labels such as "Cold" or "Hot" climate countries.
-- Apply these labels to some countries. (e.g. Cold to "Canada", "Norway"  & Hot to "Ghana","Qatar")
+PDF files for a select number of countries can be found in the repo at `data/files`. This information was provided from the UN and can also be found here:https://unctadstat.unctad.org/CountryProfile/GeneralProfile/en-GB/012/index.html. To ingest the files, do the following:
 
-## 4. Retrieve Data
-Retrieve the population time series data for some countries and plot it.
+- Look at the pdfs in `data/files` and determine which asset each file should belong to. 
+- Upload the files to CDF with the name `<country>_data_sheet` and make sure that they are assigned to the correct asset and the correct data set.
+- As a check, list all the files associated with the country of Vanuatu using `client.files.list`
 
-## 5. Final Task:  Delete the data ( Cleanup )
+## 5. Adding events
+
+In this part of the exercise, we will be adding events data for some countries. We will be using data from the disasters database which can be accessed from here: https://public.emdat.be/data. For simplicity, events data is also available in the repo at `data/events.csv` which covers all natural geological disasters in Europe from 2010. To add these to CDF:
+
+- Load the file `events.csv` into a Pandas DataFrame
+- For each row in the dataframe retrieve the following information
+    - Start date (which is a combination of the start day, start month and start year)
+    - End date (which is a combination of the end day, end month end year)
+    - Disaster Type
+    - Disaster Subtype
+    - Location
+- Map this data to a CDF Event object with the following mapping:
+    - start time is simply the **start date** but in milliseconds since Epoch
+    - end is the **end date** but in milliseconds since Epoch
+    - type is the **Disaster Type**
+    - subtype is the **Disaster Subtype**
+    - metadata is a dictionary with the location stored as `{'Location':location}`
+- Make sure to also specify its corresponding asset id (related to the country the disaster occurred in) and your data set id
+- Create the events in CDF
+- Using the Python SDK, retrieve all the events that involved Volcanic Activity
+
+
+## 6. Add Labels
+
+Labels can be used to help easily query relevant data according to pre-defined categories. In the CDF project, we already have 2 labels that represent "Hot" and "Cold" climate countries. 
+
+- Find the external ids of these 2 labels in the CDF project
+- Apply these labels to some of the country assets (e.g. Cold to "Canada", "Norway"  & Hot to "Ghana","Qatar")
+- Use the Python SDK to query for all countries that have a cold climate
+- Bonus: Create your own label and apply to your own CDF resource types.
+
+
+## 7. Final Task:  Clean-Up and Delete the Data in your Data Set
 In this step, you need to delete everything which you've added in the previous steps or tasks.
-- First delete the root asset, then delete all the subtree asssets.
-- Verify, that for the given dataset ("world_info"), there are no assets left or exists.
-- Delete all the timeseries, labels, events, sequences etc created for each asset.
 
-
+- Delete all the **assets** in your data set.
+- Delete all the **time series** in your data set.
+- Delete all the **files** in your data set.
+- Delete all the **events** in your data set.
+- Delete any custom **labels** that you may have created (NOTE: please don't remove the cold and hot climate country labels)
