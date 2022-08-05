@@ -1,0 +1,30 @@
+Dis No,Disaster Group,Disaster Subgroup,Disaster Type,Disaster Subtype,Event Name,Country,ISO,Region,Continent,Location,Origin,Start Year,Start Month,Start Day,End Year,End Month,End Day
+2011-0159-ESP,Natural,Geophysical,Earthquake,Ground movement,,Spain,ESP,Southern Europe,Europe,"Lorca municipality (Murcia district, Region de Murcia)",,2011,5,11,2011,5,11
+2010-0170-ISL,Natural,Geophysical,Volcanic activity,Ash fall,Eyjafjallajokull,Iceland,ISL,Northern Europe,Europe," Fljotshlid, Eyjafjöll, and Landeyjar villages (Rangarvalla province)",,2010,3,1,2010,4,28
+2010-0574-SRB,Natural,Geophysical,Earthquake,Ground movement,,Serbia,SRB,Southern Europe,Europe,Kraljevo town (Raski Province),,2010,11,3,2010,11,3
+2012-0152-BGR,Natural,Geophysical,Earthquake,Ground movement,,Bulgaria,BGR,Eastern Europe,Europe,"Pernik town (Pernik Province), Sofia town (Sofia-city Province)",,2012,5,22,2012,5,22
+2013-0121-HUN,Natural,Geophysical,Earthquake,Ground movement,,Hungary,HUN,Eastern Europe,Europe,Heves province,,2013,4,14,2013,4,23
+2012-0142-ITA,Natural,Geophysical,Earthquake,Ground movement,,Italy,ITA,Southern Europe,Europe,"Finale Emilia, Mirandola towns (Modena Province, Emilia-romagna Region), Sant'Agostino area (Ferrara province, Emilia-romagna Region)",,2012,5,20,2012,5,20
+2012-0162-ITA,Natural,Geophysical,Earthquake,Ground movement,,Italy,ITA,Southern Europe,Europe,Modena Province (Emilia-romagna Region),,2012,5,29,2012,5,29
+2014-0049-GRC,Natural,Geophysical,Earthquake,Ground movement,,Greece,GRC,Southern Europe,Europe,"Lixouri, Kounopetra, Fiskardo villages (Kefalonia Isl., Kefallinias district, Ionioi Nisoi province)",,2014,1,26,2014,2,3
+2014-0174-GRC,Natural,Geophysical,Earthquake,Ground movement,,Greece,GRC,Southern Europe,Europe,"Limnos Island (Lesvou district, Voreio Aigaio province), Samothrace Island (Evrou district, Anatoliki Makedonnia Kai Thraki province)",,2014,5,24,2014,5,24
+2017-0182-GRC,Natural,Geophysical,Earthquake,Ground movement,,Greece,GRC,Southern Europe,Europe,"Vrisa, Plomarion,Plagias, Chios, Kampas, Skala, Polichnitos, Mytilene (Lesbos)",,2017,6,12,2017,6,12
+2017-0280-GRC,Natural,Geophysical,Earthquake,Ground movement,,Greece,GRC,Southern Europe,Europe,Kos Island,,2017,7,21,2017,7,21
+2017-0350-CHE,Natural,Geophysical,Mass movement (dry),Rockfall,,Switzerland,CHE,Western Europe,Europe,"Bregaglia Valley, Bondo in Graubünden canton",,2017,8,23,2017,8,23
+2016-0313-ITA,Natural,Geophysical,Earthquake,Ground movement,,Italy,ITA,Southern Europe,Europe,"Amatrice, Accumoli, Pescara del Tronto, Arquataa, Posta (Rieti and Ascoli Piceno provinces)",,2016,8,24,2016,8,24
+2016-0357-ITA,Natural,Geophysical,Earthquake,Ground movement,,Italy,ITA,Southern Europe,Europe,"Visso, Ussita (Macerata district, Marche province)",,2016,10,26,2016,10,26
+2016-0358-ITA,Natural,Geophysical,Earthquake,Ground movement,,Italy,ITA,Southern Europe,Europe,"Norcia (Perugia district, Umbria province)",,2016,10,30,2016,10,30
+2016-0335-MKD,Natural,Geophysical,Earthquake,Ground movement,,North Macedonia,MKD,Southern Europe,Europe,Skopje province,,2016,9,11,2016,9,11
+2017-0015-ITA,Natural,Geophysical,Earthquake,Ground movement,,Italy,ITA,Southern Europe,Europe,"Avezzano, Campotosto, Montereale, Capitignano, Ortolano di Campoposto, Mopolino (L’Aquila); Csatel Castagna, Csatigkione Messer Raimondo, Prati di Tivo (Teramao); Abruzzo (Pescara), Lazio (Rieti), Marche (Ascoli Piceno, Macerata, Fermo, Ancona) region",,2017,1,18,2017,1,19
+2017-0349-ITA,Natural,Geophysical,Earthquake,Ground movement,,Italy,ITA,Southern Europe,Europe,"Casamicciola Terme, Lacco Ameno (Ischia Isl.), near Flegrea coast of Campania (Naples province)",,2017,8,23,2017,8,23
+2018-0461-ITA,Natural,Geophysical,Volcanic activity,None,Mount Etna,Italy,ITA,Southern Europe,Europe,"Acicatena, Acireale, Aci Sant’Antonio, Santa Venerina, Viagrande and Zafferana Etnea (Catane, Sicily)",,2018,12,24,2018,12,26
+2019-0232-ALB,Natural,Geophysical,Earthquake,Ground movement,,Albania,ALB,Southern Europe,Europe,Korçë county,,2019,6,1,2019,6,1
+2019-0444-ALB,Natural,Geophysical,Earthquake,Ground movement,,Albania,ALB,Southern Europe,Europe,"Durres, Tirana Counties",,2019,9,21,2019,9,21
+2019-0572-ALB,Natural,Geophysical,Earthquake,Ground movement,,Albania,ALB,Southern Europe,Europe,"Durrës, Kruje, Tiranë, Lezhë",,2019,11,26,2019,11,26
+2019-0551-FRA,Natural,Geophysical,Earthquake,Ground movement,,France,FRA,Western Europe,Europe, Auvergne-Rhône-Alpes region ,,2019,11,11,2019,11,11
+2020-0466-GRC,Natural,Geophysical,Earthquake,Ground movement,,Greece,GRC,Southern Europe,Europe,Samos,,2020,10,30,2020,10,30
+2020-0106-HRV,Natural,Geophysical,Earthquake,Ground movement,,Croatia,HRV,Southern Europe,Europe,Zagreb,,2020,3,22,2020,3,22
+2020-0572-HRV,Natural,Geophysical,Earthquake,Ground movement,,Croatia,HRV,Southern Europe,Europe,"Sisak, Petrinja, Glina, Hrvatska Kostajnica, Zagreb county, Karlovac county",,2020,12,29,2020,12,29
+2021-0134-GRC,Natural,Geophysical,Earthquake,Ground movement,,Greece,GRC,Southern Europe,Europe,"Larissa, Elassona (Larisis) , Tyrnavos (Larisis) , Farkadona (Trikalon) (Thessalie)",,2021,3,3,2021,3,3
+2021-0627-GRC,Natural,Geophysical,Earthquake,Ground movement,,Greece,GRC,Southern Europe,Europe,"Arkalochori, Archontiko, Roussochoria, Patsideros, Heraklion, Minoa Pediadas",,2021,9,27,2021,9,27
+2022-0231-BIH,Natural,Geophysical,Earthquake,Ground movement,,Bosnia and Herzegovina,BIH,Southern Europe,Europe,Ljubinje and Capljina,,2022,4,23,2022,4,23
