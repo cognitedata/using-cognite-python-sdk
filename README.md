@@ -1,5 +1,4 @@
 # Using Cognite Python SDK
-[![Code Quality Checks](https://github.com/cognitedata/using-cognite-python-sdk/actions/workflows/code-quality.yaml/badge.svg)](https://github.com/cognitedata/using-cognite-python-sdk/actions/workflows/code-quality.yaml)
 
 A step by step guide with practical examples and code for using Cognite Python SDK.
 https://cognite-docs.readthedocs-hosted.com/projects/cognite-sdk-python/en/latest/
@@ -8,9 +7,20 @@ https://cognite-docs.readthedocs-hosted.com/projects/cognite-sdk-python/en/lates
 
 1. First clone the repository using git
 ```
-git clone git@github.com:cognitedata/using-cognite-python-sdk.git
+git clone https://github.com/cognitedata/using-cognite-python-sdk.git
 ```
-2. Make sure that you've [poetry](https://python-poetry.org/) installed.
+
+2. Install the required packages by opening up the terminal on your machine and running the following command 
+
+```
+pip install cognite-sdk msal pandas
+```
+
+For more adavanced users, you can also use [poetry](https://python-poetry.org/) to manage your Python virtual environment. If you would like to use this, please follow the steps detailed in the next section.
+
+## Additional notes for developers:
+
+2. (Advanced) Make sure that you've [poetry](https://python-poetry.org/) installed.
 Also change the following setting in `poetry`
 ```
 poetry config virtualenvs.in-project true
@@ -22,19 +32,7 @@ poetry install
 
 Now you're ready to run the code in jupyter notebooks. ( Note : Change the "Kernel" to use the virtual environment created by poetry.)
 
-
-## Additional notes for developers:
-3. Also install pre-commit hooks. ( Make sure you've [pre-commit](https://pre-commit.com/) installed prior to this command)
-```
-pre-commit install
-```
-
-Note : Before committing to github, Always run below command, to check that pre-commit checks are passed.
-```
-poetry run pre-commit run --all-files
-``` 
-
-4. Add new libraries as needed
+3. Add new libraries as needed
 ```
 poetry add pandas numpy
 ```
