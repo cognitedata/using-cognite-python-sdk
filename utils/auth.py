@@ -1,3 +1,4 @@
+# Copyright 2022 Cognite AS
 import os
 from pathlib import Path
 
