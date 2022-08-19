@@ -16,7 +16,7 @@ git clone https://github.com/cognitedata/using-cognite-python-sdk.git
 pip install cognite-sdk msal pandas
 ```
 
-For more adavanced users, you can also use [poetry](https://python-poetry.org/) to manage your Python virtual environment. If you would like to use this, please follow the steps detailed in the next section.
+For more advanced users, you can also use [poetry](https://python-poetry.org/) to manage your Python virtual environment. If you would like to use this tool, please follow the steps detailed in the next section.
 
 ## Additional notes for developers:
 
