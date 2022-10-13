@@ -15,6 +15,7 @@ beautifulsoup4 = "^4.11.1"
 lxml = "^4.9.1"
 openpyxl = "^3.0.10"
 cognite-sdk = "^4.2.1"
+oauthlib = "^3.2.1"
 
 [tool.poetry.dev-dependencies]
 isort = "^5.10.1"
