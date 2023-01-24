@@ -16,7 +16,7 @@ lxml = "^4.9.1"
 openpyxl = "^3.0.10"
 cognite-sdk = "^4.2.1"
 oauthlib = "^3.2.1"
-ipykernel = "^6.20.1"
+safety = "^2.3.5"
 
 [tool.poetry.dev-dependencies]
 isort = "^5.10.1"
@@ -26,7 +26,6 @@ pre-commit = "^2.19.0"
 pylint = "^2.13.8"
 ipykernel = "^6.13.0"
 pytest = "^7.1.2"
-safety = "^1.10.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
