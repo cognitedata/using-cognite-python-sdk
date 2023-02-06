@@ -21,7 +21,7 @@ ipykernel==6.20.1; python_version >= "3.8"
 ipython==8.4.0; python_version >= "3.8"
 jedi==0.18.1; python_version >= "3.8"
 jupyter-client==7.3.5; python_version >= "3.8"
-jupyter-core==4.11.1; python_version >= "3.8"
+jupyter-core==4.11.2; python_version >= "3.8"
 kiwisolver==1.4.4; python_version >= "3.7"
 lxml==4.9.1; (python_version >= "2.7" and python_full_version < "3.0.0") or (python_full_version >= "3.5.0")
 matplotlib-inline==0.1.6; python_version >= "3.8"
