@@ -17,6 +17,7 @@ openpyxl = "^3.0.10"
 cognite-sdk = "^4.2.1"
 oauthlib = "^3.2.1"
 safety = "^2.3.5"
+ipykernel = "^6.21.2"
 
 [tool.poetry.dev-dependencies]
 isort = "^5.10.1"
