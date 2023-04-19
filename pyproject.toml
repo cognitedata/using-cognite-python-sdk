@@ -2,11 +2,11 @@
 name = "using-cognite-python-sdk"
 version = "0.1.0"
 description = ""
-authors = ["Choukha Ram, choukha.ram@cognite.com"]
+authors = ["Cognite <academy@cognite.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-cognite-sdk = ">=5"
+cognite-sdk = ">=6"
 jupyterlab = "^3.6.3"
 
 [build-system]
