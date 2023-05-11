@@ -2,31 +2,12 @@
 name = "using-cognite-python-sdk"
 version = "0.1.0"
 description = ""
-authors = ["Choukha Ram, choukha.ram@cognite.com"]
+authors = ["Cognite <academy@cognite.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-msal = "^1.17.0"
-python-dotenv = "^0.20.0"
-pandas = "^1.4.3"
-matplotlib = "^3.5.2"
-wget = "^3.2"
-beautifulsoup4 = "^4.11.1"
-lxml = "^4.9.1"
-openpyxl = "^3.0.10"
-cognite-sdk = "^4.2.1"
-oauthlib = "^3.2.1"
-safety = "^2.3.5"
-ipykernel = "^6.21.2"
-
-[tool.poetry.dev-dependencies]
-isort = "^5.10.1"
-black = "^22.3.0"
-flake8 = "^4.0.1"
-pre-commit = "^2.19.0"
-pylint = "^2.13.8"
-ipykernel = "^6.13.0"
-pytest = "^7.1.2"
+cognite-sdk = ">=6"
+jupyterlab = "^3.6.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
