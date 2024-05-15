@@ -43,7 +43,7 @@ For this exercise, we will be using population data from the World Bank (https:/
 
 - Create a time series object for each country asset in CDF called `<country>_population` and associate it with its corresponding country asset. Remember to associate the data as well to the data set that you created. As an example, the time series for Aruba would be called `Aruba_population`.
 - Load the data from `populations_postprocessed.csv` into a pandas dataframe.
-- Insert the data for each country in this dataframe using `client.datapoints.insert_dataframe`.
+- Insert the data for each country in this dataframe using `client.time_series.data.insert_dataframe`.
 - As a check, retrieve the latest population data for the countries of Latvia, Guatemala, and Benin.
 - Calculate the total population of the Europe region using the Asset Hierarchy and the time series data.
 
