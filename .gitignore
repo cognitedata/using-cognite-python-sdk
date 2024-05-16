@@ -131,3 +131,5 @@ dmypy.json
 # Temp folder
 temp/
 notebooks/files/
+
+.DS_Store
