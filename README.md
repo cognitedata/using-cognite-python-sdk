@@ -25,12 +25,12 @@ Also change the following setting in `poetry`
 ```
 poetry config virtualenvs.in-project true
 ```
-Open the repo in an IDE (e.g. VS code) and run the following command in the terminal/commandline after navigating to the repo folder, this installs the dependencies defined in the `pyproject.toml` file.
+Open the repo in an IDE (e.g. VS code) and run the following command in the terminal/command line after navigating to the repo folder, this installs the dependencies defined in the `pyproject.toml` file.
 ```
 poetry install
 ```
 
-Now you're ready to run the code in jupyter notebooks. (Note: You might need to change the "kernel" to use the virtual environment thath was created by poetry.)
+Now you're ready to run the code in jupyter notebooks. (Note: You might need to change the "kernel" to use the virtual environment that was created by poetry.)
 
 3. Add new libraries if needed
 ```
