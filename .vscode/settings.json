@@ -1,0 +1,19 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+  "python.languageServer": "None",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/utils"
+  ],
+  "jupyter.kernelSpec": "using-cognite-python-sdk-venv",
+  "jupyter.kernels.trusted": [
+    "using-cognite-python-sdk-venv",
+    "using-cognite-python-sdk",
+    "python3"
+  ],
+  "jupyter.kernelDiscovery": {
+    "kernelSpecs": true
+  },
+  "jupyter.interactiveWindow.creationMode": "perFile"
+}

@@ -1,3 +1,4 @@
+from pathlib import Path
 from cognite.client import ClientConfig, CogniteClient
 from cognite.client.credentials import OAuthInteractive
 
@@ -9,8 +10,26 @@ BASE_URL = f"https://{CDF_CLUSTER}.cognitedata.com"
 SCOPES = [f"{BASE_URL}/.default"]
 
 
-def interactive_client():
-    """Function to instantiate the CogniteClient, using the interactive auth flow"""
+def interactive_client(token_cache_path=None):
+    """
+    Function to instantiate the CogniteClient, using the interactive auth flow.
+    
+    Args:
+        token_cache_path: Optional path to store token cache FILE (not directory). 
+                         If None, uses in-memory cache (no persistent storage).
+                         Example: Path.home() / ".cognite" / "token_cache.json"
+                         MSAL will create a single file at this location.
+    
+    Returns:
+        CogniteClient instance
+    """
+    cache_path = token_cache_path or None
+    if cache_path:
+        cache_path = Path(cache_path)
+        # Create parent directory if it doesn't exist (cache_path is a file)
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        #cache_path = str(cache_path)
+    
     return CogniteClient(
         ClientConfig(
             client_name="Cognite Academy course taker",
@@ -20,6 +39,7 @@ def interactive_client():
                 authority_url=f"https://login.microsoftonline.com/{TENANT_ID}",
                 client_id=CLIENT_ID,
                 scopes=[f"{BASE_URL}/.default"],
+                token_cache_path=cache_path,
             ),
         )
     )
