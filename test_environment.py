@@ -10,7 +10,7 @@ try:
     
     # Configuration
     TENANT_ID = "24df34ab-a358-4b62-ba14-e5dfb43b9d63"
-    CLIENT_ID = "9f67a6ad-5933-42e7-900d-1ff5bdbc45f0"
+    CLIENT_ID = "22352de2-1f0f-48a0-ab9a-de17bbd48675"
     CDF_CLUSTER = "aw-was-gp-001"
     COGNITE_PROJECT = "oxy-oog-dev"
     BASE_URL = f"https://{CDF_CLUSTER}.cognitedata.com"
