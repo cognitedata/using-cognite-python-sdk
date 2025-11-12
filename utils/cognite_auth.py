@@ -4,11 +4,23 @@ from cognite.client.credentials import OAuthInteractive
 
 # Customer configurations
 CUSTOMER_CONFIGS = {
-    "oxy": {
+    "oxy-oog-dev": {
         "tenant_id": "24df34ab-a358-4b62-ba14-e5dfb43b9d63",
         "client_id": "22352de2-1f0f-48a0-ab9a-de17bbd48675",
         "cdf_cluster": "aw-was-gp-001",
         "cognite_project": "oxy-oog-dev",
+    },
+    "oxy-aws": {
+        "tenant_id": "24df34ab-a358-4b62-ba14-e5dfb43b9d63",
+        "client_id": "22352de2-1f0f-48a0-ab9a-de17bbd48675",
+        "cdf_cluster": "aw-was-gp-001",
+        "cognite_project": "oxy-aws",
+    },
+    "oxy-aws-dev": {
+        "tenant_id": "24df34ab-a358-4b62-ba14-e5dfb43b9d63",
+        "client_id": "22352de2-1f0f-48a0-ab9a-de17bbd48675",
+        "cdf_cluster": "aw-was-gp-001",
+        "cognite_project": "oxy-aws-dev",
     },
     # Add more customer configurations here as needed
     # "customer2": {
