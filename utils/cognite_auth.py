@@ -2,10 +2,10 @@ from pathlib import Path
 from cognite.client import ClientConfig, CogniteClient
 from cognite.client.credentials import OAuthInteractive
 
-TENANT_ID = "48d5043c-cf70-4c49-881c-c638f5796997"
-CLIENT_ID = "fab52bb5-9de2-4f9e-aefa-712da4b5fe00"
-CDF_CLUSTER = "westeurope-1"
-COGNITE_PROJECT = "ds-basics"
+TENANT_ID = "24df34ab-a358-4b62-ba14-e5dfb43b9d63"
+CLIENT_ID = "9f67a6ad-5933-42e7-900d-1ff5bdbc45f0"
+CDF_CLUSTER = "aw-was-gp-001"
+COGNITE_PROJECT = "oxy-oog-dev"
 BASE_URL = f"https://{CDF_CLUSTER}.cognitedata.com"
 SCOPES = [f"{BASE_URL}/.default"]
 
@@ -25,10 +25,12 @@ def interactive_client(token_cache_path=None):
     """
     cache_path = token_cache_path or None
     if cache_path:
-        cache_path = Path(cache_path)
+        # Ensure it's a Path object (SDK expects Path, not str)
+        if not isinstance(cache_path, Path):
+            cache_path = Path(cache_path)
         # Create parent directory if it doesn't exist (cache_path is a file)
         cache_path.parent.mkdir(parents=True, exist_ok=True)
-        #cache_path = str(cache_path)
+        # Keep as Path object - SDK expects Path and calls .exists() on it
     
     return CogniteClient(
         ClientConfig(
