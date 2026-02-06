@@ -1,0 +1,23 @@
+// /models/instances/byids
+
+
+{
+  "sources": [
+    {
+      "source": {
+        "externalId": "CogniteAsset",
+        "space": "cdf_cdm",
+        "version": "v1",
+        "type": "view"
+      }
+    }
+  ],
+  "items": [
+    {
+      "instanceType": "node",
+      "space": "{{spaceName}}",
+      "externalId": "eq_num:{{externalIdFromCanvas}}"
+    }
+  ],
+  "includeTyping": true
+}

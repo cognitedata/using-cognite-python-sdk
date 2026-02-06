@@ -1,0 +1,68 @@
+// /models/instances/query
+
+
+query GetCanvasById {
+  canvases: getCanvasById(
+    instance: {
+      space: "IndustrialCanvasInstanceSpace",
+      externalId: "{{canvasExternalId}}"
+    }
+  ) {
+    items {
+      externalId
+      name
+      visibility
+      sourceCanvasId
+      isArchived
+      isLocked
+      createdTime
+      createdBy
+      updatedAt
+      updatedBy
+      context
+
+      containerReferences (first: 1000) {
+        items {
+          id
+          containerReferenceType
+          resourceId
+          resourceSubId
+          chartsId
+          label
+          properties
+        }
+      }
+
+      fdmInstanceContainerReferences (first: 1000) {
+        items {
+          id
+          containerReferenceType
+          instanceExternalId
+          instanceSpace
+          viewExternalId
+          viewSpace
+          viewVersion
+          label
+          properties
+        }
+      }
+
+      canvasAnnotations (first: 1000) {
+        items {
+          id
+          annotationType
+          containerId
+          properties
+        }
+      }
+
+      solutionTags (first: 1000) {
+        items {
+          externalId
+          name
+          lastUpdatedTime
+        }
+      }
+    }
+  }
+}

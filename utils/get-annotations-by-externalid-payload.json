@@ -1,0 +1,69 @@
+// /models/instances/query
+
+{
+  "with": {
+    "files": {
+      "nodes": {
+        "filter": {
+          "and": [
+            {
+              "equals": {
+                "property": [
+                  "node",
+                  "externalId"
+                ],
+                "value": "{{externalIdFromCanvas}}"
+              }
+            },
+            {
+              "equals": {
+                "property": [
+                  "node",
+                  "space"
+                ],
+                "value": "{{spaceName}}"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "annotations": {
+      "edges": {
+        "from": "files",
+        "direction": "outwards"
+      },
+      "limit": 10000
+    }
+  },
+  "select": {
+    "annotations": {
+      "sources": [
+        {
+          "source": {
+            "externalId": "CogniteDiagramAnnotation",
+            "space": "cdf_cdm",
+            "type": "view",
+            "version": "v1"
+          },
+          "properties": [
+            "status",
+            "startNodeText",
+            "startNodeYMax",
+            "startNodeYMin",
+            "startNodeXMax",
+            "startNodeXMin",
+            "endNodeText",
+            "endNodeYMax",
+            "endNodeYMin",
+            "endNodeXMax",
+            "endNodeXMin",
+            "startNodePageNumber",
+            "endNodePageNumber"
+          ]
+        }
+      ],
+      "limit": 10000
+    }
+  }
+}

@@ -1,0 +1,13 @@
+// /files/byids
+
+
+{
+  "items": [
+    {
+      "instanceId": {
+        "space": "{{spaceName}}",
+        "externalId": "{{externaIdFromCanvas}}" 
+      }
+    }
+  ]
+}
