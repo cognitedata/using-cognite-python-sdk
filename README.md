@@ -1,4 +1,6 @@
-# Using Cognite Python SDK
+# Using Cognite Python SDK - Deprecated 
+
+For the new updated version with Data Modeling, please check out: https://github.com/cognitedata/using-cognite-python-sdk-data-modeling
 
 A step by step guide with practical examples and code for using Cognite Python SDK.
 https://cognite-docs.readthedocs-hosted.com/projects/cognite-sdk-python/en/latest/
